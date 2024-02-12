@@ -18,3 +18,5 @@ characters = sorted(set(text))
 
 char_to_index = dict((c,i) for i, c in enumerate(characters))
 
+#https://www.youtube.com/watch?v=QM5XDc4NQJo&list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg- (at 9:16)
+
