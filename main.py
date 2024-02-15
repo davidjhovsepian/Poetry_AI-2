@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=QM5XDc4NQJo
 import random
 import numpy as np
 import tensorflow as tf
@@ -17,6 +18,14 @@ text = text [3000000:800000]
 characters = sorted(set(text))
 
 char_to_index = dict((c,i) for i, c in enumerate(characters))
+index_to_char = dict((c,i) for i, c in enumerate(characters))
 
-#https://www.youtube.com/watch?v=QM5XDc4NQJo&list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg- (at 9:16)
+SEQ_LENGTH = 40
+STEP_SIZE=3 
+
+sentences = []
+next_characters = []
+
+for i in range(0,len(text)- SEQ_LENGTH, STEP_SIZE):
+    sentences.append(i: i + SEQ_LENGTH)
 
