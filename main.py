@@ -42,4 +42,10 @@ for i, sentence in enumerate(sentences):
     
     y[i,char_to_index[next_characters[i]]]=1
 
+#now we will build the neural network
+model = sequential()
+model.add(LSTM(128, input_shape=(SEQ LENGHT, len(characters))))
+model.add(Dense(len(characters)))
+model.add(Activation('softmax'))
+
 #19:00
