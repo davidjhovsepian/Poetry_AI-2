@@ -48,4 +48,9 @@ model.add(LSTM(128, input_shape=(SEQ LENGHT, len(characters))))
 model.add(Dense(len(characters)))
 model.add(Activation('softmax'))
 
-#19:00
+model.compile(loss='categorical_crossentropy', optimizer=RMSprop(lr=0.01))
+
+model.fit(x,y,batch_size=256, epoch=4)
+
+model.save('textgenerator.model')
+#23:02
